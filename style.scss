@@ -1,2 +1,9 @@
 @use 'partials/top-picks';
+@use 'partials/variables';
 @use 'partials/cartes';
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}

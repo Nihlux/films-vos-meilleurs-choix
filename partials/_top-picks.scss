@@ -1,8 +1,12 @@
 @use "variables";
+@use 'mixins/text';
+@use "sass:color";
 
 .top-picks { 
   position: relative;
-  padding: 50px; 
+  padding: 50px;
+  background: color.adjust(variables.$primary, $lightness: 5%); 
+  height: 100%;
 
   &__header {
     border-left: solid 5px variables.$primary;
@@ -22,4 +26,9 @@
     display: flex;
     margin: 0 -5px;
   }
+}
+
+.top-picks__header {
+  color: white;
+  @include text.small-cap;
 }
